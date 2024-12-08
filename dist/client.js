@@ -1,0 +1,1 @@
+class o{baseUrl;constructor(e="http://localhost:5000"){this.baseUrl=e}async recognize(e,s){let t=new FormData;t.append("image",e),t.append("question",s);try{let r=await fetch(this.baseUrl,{method:"POST",body:t});if(!r.ok)throw new Error(`HTTP error! status: ${r.status}`);return await r.json()}catch(r){return{question:s,error:"Error checking image"}}}}var i=o;export{i as default};

@@ -1,0 +1,7 @@
+assets
+clients
+bun.lockb
+virus.txt.base64
+src/server.py
+Dockerfile
+docker-compose.yaml
