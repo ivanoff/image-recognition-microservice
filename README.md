@@ -72,6 +72,7 @@ curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Configuration](#configuration)
+    - [Start the server](#start-the-server)
     - [Dependencies](#dependencies)
   - [API Usage](#api-usage)
     - [Endpoint](#endpoint)
@@ -125,6 +126,29 @@ Set the `API_TOKEN` in the `.env` file to secure the API. Example:
 ```plaintext
 API_TOKEN=your_secret_token
 ```
+
+### Start the server
+
+To start the server, run the following command:
+
+```bash
+sudo docker compose build
+sudo docker compose up
+```
+
+After running the command, wait for the following message to appear in the terminal:
+
+```plaintext
+api-1  |  * Serving Flask app 'server'
+api-1  |  * Debug mode: off
+api-1  | WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+api-1  |  * Running on all addresses (0.0.0.0)
+api-1  |  * Running on http://127.0.0.1:5000
+api-1  |  * Running on http://172.21.0.2:5000
+api-1  | Press CTRL+C to quit
+```
+
+The server will be available at `http://localhost:5000/`.
 
 ### Dependencies
 
