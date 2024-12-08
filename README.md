@@ -10,8 +10,64 @@ This is a microservice for `image recognition` and question answering. It can an
 - Answers questions related to the image's content.
 - Simple REST API for integration.
 
+## Brief Example
+
+![image-example](./assets/example.png)
+
+### Describe this image (default question)
+
+```bash
+curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png"
+```
+
+**Response:**
+
+```json
+{
+  "answer": "The image depicts the animated character Homer Simpson in a room, pointing to a drawing of a car on a whiteboard.",
+  "question": "Describe this image"
+}
+```
+
+### Describe in detail this image
+
+```bash
+curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png" -F "question=Describe in detail this image"
+```
+
+**Response:**
+
+```json
+{
+  "answer": "The image depicts a scene from the animated television series \"The Simpsons\". The central figure is Homer Simpson, a renowned character known for his love of cars. He is standing in front of a whiteboard, which displays a drawing of a car. Homer is pointing towards the drawing, suggesting he is explaining or admiring it. The background is a vibrant purple color, providing a contrast to the whiteboard and the yellow figure of Homer.",
+  "question": "Describe in detail this image"
+}
+```
+
+### What color is the skin?
+
+```bash
+curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png" -F "question=What color is the skin?"
+```
+
+**Response:**
+
+```json
+{
+  "answer": "The color of skin in the image is yellow.",
+  "question": "What the color of skin?"
+}
+```
+
+## Table of Contents
+
 - [Image Recognition Microsevice](#image-recognition-microsevice)
   - [Features](#features)
+  - [Brief Example](#brief-example)
+    - [Describe this image (default question)](#describe-this-image-default-question)
+    - [Describe in detail this image](#describe-in-detail-this-image)
+    - [What color is the skin?](#what-color-is-the-skin)
+  - [Table of Contents](#table-of-contents)
   - [Server](#server)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
@@ -23,7 +79,7 @@ This is a microservice for `image recognition` and question answering. It can an
     - [Form Data](#form-data)
     - [Example Request](#example-request)
     - [Example Response](#example-response)
-      - [Response with Error](#response-with-error)
+    - [Example Response with Error](#example-response-with-error)
   - [Node.js Image Recognition Client](#nodejs-image-recognition-client)
     - [Installation](#installation-1)
     - [Usage](#usage)
