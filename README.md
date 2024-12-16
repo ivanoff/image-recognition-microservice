@@ -16,9 +16,9 @@ This is a microservice for `image recognition` and question answering. It can an
 
 ### Describe this image (default question)
 
-```
-The image depicts the animated character Homer Simpson in a room, pointing to a drawing of a car on a whiteboard.
-```
+> The image depicts the animated character Homer Simpson in a room, pointing to a drawing of a car on a whiteboard.
+
+**Request:**
 
 ```bash
 curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png"
@@ -35,9 +35,9 @@ curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./
 
 ### Describe in detail this image
 
-```
-The image depicts a scene from the animated television series \"The Simpsons\". The central figure is Homer Simpson, a renowned character known for his love of cars. He is standing in front of a whiteboard, which displays a drawing of a car. Homer is pointing towards the drawing, suggesting he is explaining or admiring it. The background is a vibrant purple color, providing a contrast to the whiteboard and the yellow figure of Homer.
-```
+> The image depicts a scene from the animated television series "The Simpsons". The central figure is Homer Simpson, a renowned character known for his love of cars. He is standing in front of a whiteboard, which displays a drawing of a car. Homer is pointing towards the drawing, suggesting he is explaining or admiring it. The background is a vibrant purple color, providing a contrast to the whiteboard and the yellow figure of Homer.
+
+**Request:**
 
 ```bash
 curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png" -F "question=Describe in detail this image"
@@ -54,9 +54,9 @@ curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./
 
 ### What color is the skin?
 
-```
-The color of skin in the image is yellow.
-```
+> The color of skin in the image is yellow.
+
+**Request:**
 
 ```bash
 curl -X POST http://127.0.0.1:5000/ -H "Authorization: Bearer 123" -F "image=@./assets/example.png" -F "question=What color is the skin?"
