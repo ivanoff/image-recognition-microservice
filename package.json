@@ -1,7 +1,7 @@
 {
   "name": "image-recognition-microservice",
   "description": "Image Recognition Microsevice",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Dimitry Ivanov <2@ivanoff.org.ua> # curl -A cv ivanoff.org.ua",
   "license": "MIT",
   "main": "./dist/client.js",
