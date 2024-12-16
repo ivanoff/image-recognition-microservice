@@ -2,7 +2,7 @@
 
 # Image Recognition Microsevice
 
-This is a microservice for `image recognition` and question answering. It can analyze an image and respond to specific questions about its content. The server is built using `Python` and `moondream` (a small vision language model designed to run efficiently on edge devices, (more on huggingface)[https://huggingface.co/vikhyatk/moondream2]) for image recognition and question answering.
+This is a standalone microservice for `image recognition` and question answering. It can analyze an image and respond to specific questions about its content. The server is built using `Python` and `moondream` (a small vision language model designed to run efficiently on edge devices, ([more on huggingface](https://huggingface.co/vikhyatk/moondream2)) for image recognition and question answering.
 
 ## Features
 
